@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+      
+       <div class="container">
+         <h1>WORKOUT VIDEO GALLERY</h1>
+            <div class="row">
+              <div class="col">
+                <div class="feature-img">
+                     <img src="media/chest.png" width="100%">
+                     <img src="media/play.png" class="play-btn" onclick="playVideo('video.mp4/chest1.mp4')">
+                 </div>
+              </div>
+              <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="media/legpress.png">
+                    <img src="media/play.png" class="play-btn" onclick="playVideo('video.pm4/legpress.mp4')">
+                </div>
+                <p>how to perform a chest press machine<br>to
+                build muscle</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="media/Yraises1.png">
+                    <img src="media/play.png" class="play-btn" onclick="playVideo('video.mp4/Yraises1.mp4')">
+                </div>
+                <p>how to perform a chest press machine<br>to
+                build muscle</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="media/chest2.png">
+                    <img src="media/play.png" class="play-btn" onclick="playVideo('video.mp4/chest2.MP4')">
+                </div>
+                <p>how to perform a chest press machine<br>to
+                build muscle</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="media/illiaclatpull2.png">
+                    <img src="media/play.png" class="play-btn" onclick="playVideo('video.mp4/illiaclatpull2.mp4')">
+                </div>
+                <p>how to perform a chest press machine<br>to
+                build muscle</p>
+                </div>
+              </div>
+            </div>
+         </div>
+
+         <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="video.mp4/chest1.MP4" type="video/mp4">
+            </video>
+            <img src="media/close.png" class="close-btn" onclick="stopVideo()">
+         </div>
+
+
+<script src="assets/js/video.js"></script>
+
+
+</body>
+</html>
