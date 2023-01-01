@@ -100,3 +100,22 @@ video:focus{
   width: 30px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 640px) {
+.features{
+  background-color: deepskyblue;
+}
+
+.small-img-row{
+  display: flex;
+    background: #efefef;
+    margin: 20px 0;
+    align-items: self-start;
+    border-radius: 6px;
+    overflow: hidden;
+    width: max-content;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+}
