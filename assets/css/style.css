@@ -509,7 +509,7 @@ body {
   width: 280px;
 }
 
-.hero .abs-img { animation: move 3s linear infinite alternate; }
+
 
 @keyframes move {
   0% { transform: translate(0, 0); }
@@ -517,7 +517,7 @@ body {
   100% { transform: translate(5px, 20px); }
 }
 
-.hero .abs-img-2 { animation-direction: alternate-reverse; }
+
 
 
 
@@ -1015,11 +1015,7 @@ body {
 
   .hero::after { height: 340px; }
 
-  .abs-img-1 {
-    top: 130px;
-    right: -10px;
-    width: 230px;
-  }
+
 
   .abs-img-2 {
     bottom: 20px;
@@ -1108,10 +1104,7 @@ body {
     margin-inline: auto;
   }
 
-  .abs-img-1 {
-    top: 140px;
-    right: -50px;
-  }
+ 
 
 
 
