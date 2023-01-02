@@ -107,15 +107,21 @@ video:focus{
 }
 
 .small-img-row{
-  display: flex;
+   display: flex;
+   flex-direction: column-reverse;
     background: #efefef;
     margin: 20px 0;
-    align-items: self-start;
+    align-items: center;
     border-radius: 6px;
     overflow: hidden;
-    width: max-content;
+    width: revert;
     flex-wrap: nowrap;
-    flex-direction: row;
 }
 
+.small-img-row p{
+  margin-left: 5px;
+  color: #707070;
+  line-height: 30px;
+  font-size: 10px;
+}
 }
