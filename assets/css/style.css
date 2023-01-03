@@ -29,7 +29,7 @@
   --sonic-silver: hsl(0, 0%, 47%);
   --cadet-gray: hsl(214, 15%, 62%);
   --light-gray: hsl(0, 0%, 80%);
-  --coquelicot: hsl(12, 98%, 52%);
+  --coquelicot: hsl(202, 98%, 52%);
   --gainsboro: hsl(0, 0%, 88%);
   --white_20: hsl(0, 0%, 100%, 0.2);
   --white_10: hsl(0, 0%, 100%, 0.1);
@@ -228,7 +228,7 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--coquelicot);
+  background-color: deepskyblue;
   color: var(--white);
 }
 
@@ -379,7 +379,7 @@ body {
 }
 
 .logo ion-icon {
-  color: var(--coquelicot);
+  color: deepskyblue;
   font-size: 40px;
   transform: rotate(90deg) translate(-2px, -5px);
 }
@@ -483,7 +483,7 @@ body {
 
 .hero-subtitle .strong {
   display: inline-block;
-  background-color: var(--coquelicot);
+  background-color: deepskyblue;
   padding: 2px 15px;
   margin-inline-end: 15px;
   border-radius: var(--radius-5);
