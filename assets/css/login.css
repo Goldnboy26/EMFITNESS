@@ -323,4 +323,36 @@ nav {
   padding: 10px 8px;
 
 }
+
+
+nav {
+
+  display: flex;
+
+  flex-direction: column-reverse;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  min-height: 8vh;
+
+  background-color: black;
+
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.heading {
+
+  color: white;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  font-size: 10px;
+
+}
+
 }
