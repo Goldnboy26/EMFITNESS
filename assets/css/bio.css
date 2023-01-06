@@ -50,7 +50,7 @@ span{
 }
 
 .about-text p{
-    color: #fcfc;
+    color: white;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
@@ -65,4 +65,12 @@ button{
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
+    transition: .4s;
 }
+
+button:hover{
+    background: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+
