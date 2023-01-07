@@ -87,16 +87,35 @@ button:hover{
         flex-direction: column-reverse;
     }
 
+    .about-text h5{
+        color: white;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
     .about-text p {
         color: white;
-        letter-spacing: 0px;
-        line-height: 28px;
+        letter-spacing: 2px;
+        line-height: 20px;
         font-size: 15px;
         margin-bottom: 45px;
+        text-align: center;
     }
 
     .about img {
         height: auto;
         width: 200px;
     }
-}
+
+    .about-text h1{
+        color: white;
+        font-size: 65px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    }
