@@ -13,15 +13,12 @@ function stopVideo(){
     videoPlayer.style.display="block";
   }
 
-  const header = document.querySelector("[data-header]");
-  const backTopBtn = document.querySelector("[data-back-top-btn]");
+  const toTop = document.querySelector(".to-top");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 100) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
-});
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+      toTop.classList.add("active");
+    } else {
+      toTop.classList.remove("active");
+    }
+  })
