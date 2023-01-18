@@ -1,65 +1,115 @@
-const signUpBtn = document.getElementById('signUp'),
-  signInBtn = document.getElementById('signIn'),
-  container = document.getElementById('container');
+/*global $, document, window, setTimeout, navigator, console, location*/
+$(document).ready(function () {
 
-signUpBtn.addEventListener('click', () => {
-  container.classList.add('right-panel-active');
-});
-signInBtn.addEventListener('click', () => {
-  container.classList.remove('right-panel-active');
-});
+  'use strict';
 
-function setFormMessage(formElement, type, message) {
-  const messageElement = formElement.querySelector(".form__message");
+  var usernameError = true,
+      emailError    = true,
+      passwordError = true,
+      passConfirm   = true;
 
-  messageElement.textContent = message;
-  messageElement.classList.remove("form__message--success", "form__message--error");
-  messageElement.classList.add(`form__message--${type}`);
-}
+  // Detect browser for css purpose
+  if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+      $('.form form label').addClass('fontSwitch');
+  }
 
-function setInputError(inputElement, message) {
-  inputElement.classList.add("form__input--error");
-  inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
-}
+  // Label effect
+  $('input').focus(function () {
 
-function clearInputError(inputElement) {
-  inputElement.classList.remove("form__input--error");
-  inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.querySelector("#login");
-  const createAccountForm = document.querySelector("#createAccount");
-
-  document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-      e.preventDefault();
-      loginForm.classList.add("form--hidden");
-      createAccountForm.classList.remove("form--hidden");
+      $(this).siblings('label').addClass('active');
   });
 
-  document.querySelector("#linkLogin").addEventListener("click", e => {
-      e.preventDefault();
-      loginForm.classList.remove("form--hidden");
-      createAccountForm.classList.add("form--hidden");
-  });
+  // Form validation
+  $('input').blur(function () {
 
-  loginForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      // Perform your AJAX/Fetch login
-
-      setFormMessage(loginForm, "error", "Invalid username/password combination");
-  });
-
-  document.querySelectorAll(".form__input").forEach(inputElement => {
-      inputElement.addEventListener("blur", e => {
-          if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-              setInputError(inputElement, "Username must be at least 10 characters in length");
+      // User Name
+      if ($(this).hasClass('name')) {
+          if ($(this).val().length === 0) {
+              $(this).siblings('span.error').text('Please type your full name').fadeIn().parent('.form-group').addClass('hasError');
+              usernameError = true;
+          } else if ($(this).val().length > 1 && $(this).val().length <= 6) {
+              $(this).siblings('span.error').text('Please type at least 6 characters').fadeIn().parent('.form-group').addClass('hasError');
+              usernameError = true;
+          } else {
+              $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
+              usernameError = false;
           }
-      });
+      }
+      // Email
+      if ($(this).hasClass('email')) {
+          if ($(this).val().length == '') {
+              $(this).siblings('span.error').text('Please type your email address').fadeIn().parent('.form-group').addClass('hasError');
+              emailError = true;
+          } else {
+              $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
+              emailError = false;
+          }
+      }
 
-      inputElement.addEventListener("input", e => {
-          clearInputError(inputElement);
-      });
+      // PassWord
+      if ($(this).hasClass('pass')) {
+          if ($(this).val().length < 8) {
+              $(this).siblings('span.error').text('Please type at least 8 charcters').fadeIn().parent('.form-group').addClass('hasError');
+              passwordError = true;
+          } else {
+              $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
+              passwordError = false;
+          }
+      }
+
+      // PassWord confirmation
+      if ($('.pass').val() !== $('.passConfirm').val()) {
+          $('.passConfirm').siblings('.error').text('Passwords don\'t match').fadeIn().parent('.form-group').addClass('hasError');
+          passConfirm = false;
+      } else {
+          $('.passConfirm').siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
+          passConfirm = false;
+      }
+
+      // label effect
+      if ($(this).val().length > 0) {
+          $(this).siblings('label').addClass('active');
+      } else {
+          $(this).siblings('label').removeClass('active');
+      }
   });
+
+
+  // form switch
+  $('a.switch').click(function (e) {
+      $(this).toggleClass('active');
+      e.preventDefault();
+
+      if ($('a.switch').hasClass('active')) {
+          $(this).parents('.form-peice').addClass('switched').siblings('.form-peice').removeClass('switched');
+      } else {
+          $(this).parents('.form-peice').removeClass('switched').siblings('.form-peice').addClass('switched');
+      }
+  });
+
+
+  // Form submit
+  $('form.signup-form').submit(function (event) {
+      event.preventDefault();
+
+      if (usernameError == true || emailError == true || passwordError == true || passConfirm == true) {
+          $('.name, .email, .pass, .passConfirm').blur();
+      } else {
+          $('.signup, .login').addClass('switched');
+
+          setTimeout(function () { $('.signup, .login').hide(); }, 700);
+          setTimeout(function () { $('.brand').addClass('active'); }, 300);
+          setTimeout(function () { $('.heading').addClass('active'); }, 600);
+          setTimeout(function () { $('.success-msg p').addClass('active'); }, 900);
+          setTimeout(function () { $('.success-msg a').addClass('active'); }, 1050);
+          setTimeout(function () { $('.form').hide(); }, 700);
+      }
+  });
+
+  // Reload page
+  $('a.profile').on('click', function () {
+      location.reload(true);
+  });
+
+
 });
