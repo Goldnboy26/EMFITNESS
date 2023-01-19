@@ -238,7 +238,7 @@ html {
 
 .small-img-row{
    display: flex;
-   flex-direction: column-reverse;
+   flex-direction: row;
     background: #efefef;
     margin: 20px 0;
     align-items: center;
@@ -251,8 +251,9 @@ html {
 .small-img-row p{
   margin-left: 5px;
   color: #707070;
-  line-height: 30px;
+  line-height: 20px;
   font-size: 10px;
+  font-weight: bold;
 }
 
 .heading {
