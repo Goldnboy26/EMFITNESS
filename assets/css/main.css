@@ -17,9 +17,9 @@ body{
 }
 
 .container h1 {
-  padding: 60px 0;
-  color: #000000;
-  font-size: 44px;
+  padding: 35px 0;
+  color: white;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -58,7 +58,7 @@ body{
 }
 
 .small-img img{
-  width: 150px;
+  width: 210px;
 }
 
 .small-img-row p{
@@ -136,7 +136,7 @@ nav {
 
   min-height: 8vh;
 
-  background-color: black;
+  background-color: transparent;
 
   font-family: "Montserrat", sans-serif;
 
@@ -251,7 +251,7 @@ html {
 .small-img-row p{
   margin-left: 5px;
   color: #707070;
-  line-height: 20px;
+  line-height: 12px;
   font-size: 10px;
   font-weight: bold;
 }
@@ -293,9 +293,9 @@ nav {
 
   align-items: center;
 
-  min-height: 10vh;
+  min-height: 8vh;
 
-  background-color: black;
+  background-color: transparent;
 
   font-family: "Montserrat", sans-serif;
 

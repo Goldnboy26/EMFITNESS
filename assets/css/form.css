@@ -87,7 +87,7 @@ form button{
   
     min-height: 8vh;
   
-    background-color: white;
+    background-color: black;
   
     font-family: "Montserrat", sans-serif;
   
@@ -95,7 +95,7 @@ form button{
   
   .heading {
   
-    color: black;
+    color: white;
   
     text-transform: uppercase;
   
@@ -123,7 +123,7 @@ form button{
   
   .nav-links a {
   
-    color: black;
+    color: white;
   
     text-decoration: none;
   
