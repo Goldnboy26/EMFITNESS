@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/login.css" rel="stylesheet">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+    <div class="login-wrapper">
+        <form action="" class="form">
+            <h2>LOGIN</h2>
+            <div class="input-group">
+                <input type="text" name="loginUser" id="email" required/>
+                <label for="loginUser">Email Addres</label>              
+            </div>
+            <div class="input-group">
+                <input
+                type="password"
+                name="loginPassword"
+                id="password"
+                required
+                />
+                <label for="loginPassword">Password</label>
+            </div>
+            <input type="submit" value="login" class="submit-btn" onclick="auth()"/>
+        </form>
+    </div>
+    <script>
+        function auth() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (email== "admin@gmail.com", "enrique.monje1994@yahoo.com" && password=="admin123", "goldenboy"){
+                window.location.assign('https://goldnboy26.github.io/EMFITNESS/gallery.html');
+                alert("login Successfully");
+            }
+
+            else{
+                alert("Invalid Information")
+                return;
+            }
+
+        }
+    </script>
+</body>
+</html>
