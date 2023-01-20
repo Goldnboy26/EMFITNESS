@@ -31,9 +31,11 @@
         function auth() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-            if (screen.width <= 699 && email == "admin@gmail.com" && password == "admin123"){
-                window.location.replace =  'https://goldnboy26.github.io/EMFITNESS/gallery.html'
-            }
+
+            if (email== "admin@gmail.com" && password=="admin123" || screen.width <= 800 && !window.location.href.match('https://goldnboy26.github.io/EMFITNESS/login.html')) {
+            window.location.replace('https://goldnboy26.github.io/EMFITNESS/login/gallery.html');
+              }
+
             if (email== "admin@gmail.com" && password=="admin123" ){
                 window.location.href= 'https://goldnboy26.github.io/EMFITNESS/gallery.html'
                 alert("login Successfully");
@@ -41,11 +43,6 @@
 
             if (email== "enrique.monje1994@yahoo.com" && password=="goldnboy26"){
                 window.location.href= 'https://goldnboy26.github.io/EMFITNESS/gallery.html'
-                alert("login Successfully");
-            }
-
-            if (screen.width <= 699 && email== "enrique.monje1994@yahoo.com" && password=="goldnboy26"){
-                window.location.replace= 'https://goldnboy26.github.io/EMFITNESS/gallery.html'
                 alert("login Successfully");
             }
 
