@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-2.1.4.js"></script>
+  <script src="mobile-detect.js"></script>
     <link href="assets/css/login.css" rel="stylesheet">
     <title>LOGIN PAGE</title>
 </head>
 <body>
+
+    <div id="navbar"><span>Mobile-detect.js</span></div>
+  <div id="wrapper">
+    <button id="detect-button">Detect Device</button>
+
     <div class="login-wrapper">
         <form action="" class="form">
             <h2>LOGIN</h2>
@@ -45,7 +52,6 @@
                 alert("Invalid Information")
                 return;
             }
-
         }
     </script>
 </body>
