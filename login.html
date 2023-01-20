@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-2.1.4.js"></script>
-  <script src="mobile-detect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
     <link href="assets/css/login.css" rel="stylesheet">
     <title>LOGIN PAGE</title>
 </head>
@@ -34,7 +33,7 @@
             <input type="submit" value="login" class="submit-btn" onclick="auth()"/>
         </form>
     </div>
-    <script>
+    <script src="assets/js/login.js"> 
         function auth() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
