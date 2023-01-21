@@ -3,7 +3,7 @@ function auth() {
     var password = document.getElementById("password").value;
 
     if(screen.width <= 699){
-        document.location = 'https://goldnboy26.github.io/EMFITNESS/gallery.html';
+        window.location.href = 'https://goldnboy26.github.io/EMFITNESS/gallery.html';
     }
 
     if (email== "admin@gmail.com" && password=="admin123" ){
