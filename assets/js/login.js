@@ -2,7 +2,7 @@ function auth() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    if(screen.width <= 699 || email== "admin@gmail.com" && password=="admin123" ){
+    if(screen.width <= 640 || email== "admin@gmail.com" && password=="admin123" ){
         window.location.href = 'https://goldnboy26.github.io/EMFITNESS/gallery.html'
         alert("login Successfully");
     }
