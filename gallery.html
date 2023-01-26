@@ -27,11 +27,12 @@
 
       <li><a href="contact.html">Contact</a></li>
 
+      <button class="btn">Logout</button>
+
     </ul>
   </nav>
 
-  <button onclick="logout()">Logout</button>
-
+  <body>
 </body>
 
 
@@ -289,7 +290,6 @@
     <i class="fas fa-chevron-up"></i>
   </a>
 
-    
 
 <script src="assets/js/video.js">
 
@@ -319,18 +319,20 @@
             document.getElementById('image').setAttribute('src',info.picture)
         })
 
-        function logout() {
-        fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],
-            {
-                method: 'POST',
-                headers: {
-                    "Content-type": "application/x-www-form-urlencoded"
-                }
-            })
-            .then((data) => {
-                location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
-            })
-    }
+        var btn= document.querySelector('.btn');
+        function btn() {
+  fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],
+      {
+          method: 'POST',
+          headers: {
+              "Content-type": "application/x-www-form-urlencoded"
+          }
+      })
+      .then((data) => {
+          location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
+      })
+}
+
 </script>
 
 
