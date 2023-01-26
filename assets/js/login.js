@@ -30,16 +30,16 @@ function signIn(){
   document.body.appendChild(form);
   form.submit();
 }
-  
+
 function logout() {
-  fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],
-      {
-          method: 'POST',
-          headers: {
-              "Content-type": "application/x-www-form-urlencoded"
-          }
-      })
-      .then((data) => {
-          location.href = "https://goldnboy26.github.io/EMFITNESS"
-      })
+fetch("https://oauth2.googleapis.com/revoke?token=" + ['access_token'],
+    {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded"
+        }
+    })
+    .then((data) => {
+        location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
+    })
 }

@@ -27,10 +27,13 @@
 
       <li><a href="contact.html">Contact</a></li>
 
-      <button class="btn">Logout</button>
+      <button id="logout" class="logout" onclick="logout()"> logout </button>
+
     </ul>
   </nav>
 
+  
+</body>
 
 
 
@@ -38,7 +41,7 @@
          <h1>BUILDING A BETTER YOU!</h1>
             <div class="row">
               <div class="col">
-                <div class="feature-img">
+                <div  class="feature-img">
                      <img src="assets/images/gallery.png" width="100%">
                      <img src="media/play.png" class="play-btn" onclick="playVideo('video/fitness.MP4')">
                  </div>
@@ -289,7 +292,7 @@
   </a>
 
     
-
+<script src="assets/js/login.js"></script>
 <script src="assets/js/video.js">
 
    // Parse query string to see if page request is coming from OAuth 2.0 server.
@@ -301,7 +304,7 @@
     if (Object.keys(params).length > 0) {
         localStorage.setItem('authInfo', JSON.stringify(params));
     }
-    window.history.pushState({}, document.title, "/" + "profile.html");
+    window.history.pushState({}, document.title, "/" + "gallery.html");
     let info = JSON.parse(localStorage.getItem('authInfo'))
     console.log(info['access_token'])
     console.log(info['expires_in'])
@@ -318,20 +321,7 @@
             document.getElementById('image').setAttribute('src',info.picture)
         })
 
-        var btn = document.querySelector ('.btn')
-
-        function btn() {
-        fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],
-            {
-                method: 'POST',
-                headers: {
-                    "Content-type": "application/x-www-form-urlencoded"
-                }
-            })
-            .then((data) => {
-                location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
-            })
-    }
+       
 </script>
 
 
