@@ -28,12 +28,10 @@
       <li><a href="contact.html">Contact</a></li>
 
       <button class="btn">Logout</button>
-
     </ul>
   </nav>
 
-  <body>
-</body>
+
 
 
        <div class="container">
@@ -290,6 +288,7 @@
     <i class="fas fa-chevron-up"></i>
   </a>
 
+    
 
 <script src="assets/js/video.js">
 
@@ -302,7 +301,7 @@
     if (Object.keys(params).length > 0) {
         localStorage.setItem('authInfo', JSON.stringify(params));
     }
-    window.history.pushState({}, document.title, "/" + "gallery.html");
+    window.history.pushState({}, document.title, "/" + "profile.html");
     let info = JSON.parse(localStorage.getItem('authInfo'))
     console.log(info['access_token'])
     console.log(info['expires_in'])
@@ -319,20 +318,20 @@
             document.getElementById('image').setAttribute('src',info.picture)
         })
 
-        var btn= document.querySelector('.btn');
-        function btn() {
-  fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],
-      {
-          method: 'POST',
-          headers: {
-              "Content-type": "application/x-www-form-urlencoded"
-          }
-      })
-      .then((data) => {
-          location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
-      })
-}
+        var btn = document.querySelector ('.btn')
 
+        function btn() {
+        fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],
+            {
+                method: 'POST',
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded"
+                }
+            })
+            .then((data) => {
+                location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
+            })
+    }
 </script>
 
 
