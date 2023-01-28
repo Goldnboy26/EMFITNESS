@@ -120,6 +120,7 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
 
 img {
@@ -150,7 +151,13 @@ img {
     color: var(--sonic-silver);
     font-size: var(--fs-6);
     margin-block: 16px 12px;
+    text-align: -webkit-left;
 }
+
+.scrollbar-item {
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
 
 .has-scrollbar {
     display: flex;
@@ -160,6 +167,7 @@ img {
     padding-block-end: 30px;
     scroll-snap-type: inline mandatory;
     width: 100%;
+    text-align: -webkit-center;
 }
 
 /*-----------------------------------*\
@@ -167,43 +175,17 @@ img {
 \*-----------------------------------*/
 
 
-li { list-style: none; }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
-a,
-img,
-span,
-input,
-button,
-strong,
-ion-icon { display: block; }
-
-img { height: auto; }
-
-input,
-button {
-  background: none;
-  border: none;
-  font: inherit;
-}
-
-input { width: 100%; }
-
-button { cursor: pointer; }
-
-ion-icon { pointer-events: none; }
-
-address { font-style: normal; }
 
 body {
   background-color: var(--white);
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 1.6;
+  text-align: -webkit-center;
 }
 
 
@@ -222,6 +204,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    width: 80%;
 }
 
 element.style {
@@ -232,6 +215,7 @@ element.style {
     aspect-ratio: var(--width) / var(--height);
     background-color: var(--light-gray);
     overflow: hidden;
+    width: 45%;
 }
 
 style attribute {
