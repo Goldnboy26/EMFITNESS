@@ -1,4 +1,3 @@
- 
 
 function signIn(){
     // Google's OAuth 2.0 endpoint for requesting an access token
@@ -31,15 +30,3 @@ function signIn(){
   form.submit();
 }
 
-function logout() {
-fetch("https://oauth2.googleapis.com/revoke?token=" + ['access_token'],
-    {
-        method: 'POST',
-        headers: {
-            "Content-type": "application/x-www-form-urlencoded"
-        }
-    })
-    .then((data) => {
-        location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
-    })
-}
