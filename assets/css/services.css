@@ -227,3 +227,27 @@ style attribute {
     display: flex;
     align-items: center;
 }
+
+
+@media screen and (max-width: 640px) {
+    .class-card {
+        background-color: var(--white);
+        border-radius: var(--radius-10);
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .has-scrollbar {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        overflow-x: visible;
+        padding-block-end: 30px;
+        scroll-snap-type: inline mandatory;
+        width: 100%;
+        text-align: -webkit-center;
+    }
+}
