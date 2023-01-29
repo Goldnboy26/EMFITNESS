@@ -230,24 +230,44 @@ style attribute {
 
 
 @media screen and (max-width: 640px) {
-    .class-card {
-        background-color: var(--white);
-        border-radius: var(--radius-10);
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: row;
-        width: 80%;
+    body{
+        font-size: 1.9rem;
+        line-height: 1.1;
     }
 
-    .has-scrollbar {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        overflow-x: visible;
-        padding-block-end: 30px;
-        scroll-snap-type: inline mandatory;
-        width: 100%;
-        text-align: -webkit-center;
-    }
+
+
+html {
+    font-family: var(--ff-rubik);
+    font-size: 10px;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.class-card {
+    background-color: var(--white);
+    border-radius: var(--radius-10);
+    height: 100%;
+    overflow: hidden;
+    width: 90%;
+}
+
+.img-holder {
+    aspect-ratio: var(--width) / var(--height);
+    background-color: var(--light-gray);
+    overflow: hidden;
+}
+
+element.style {
+    --width: 416;
+    --height: 240;
+}
+
+.class-card .card-content {
+    padding: 15px;
+    width: 80%;
+}
 }
