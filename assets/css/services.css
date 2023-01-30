@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 user agent stylesheet
 ul {
     display: block;
@@ -13,10 +14,8 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-.bg-dark {
-    background-color: var(--rich-black-fogra-29-1);
-    color: var(--silver-metallic);
-}
+
+
 
 :root {
     --rich-black-fogra-29_50: hsl(210, 26%, 11%, 0.5);
@@ -112,7 +111,7 @@ html {
     background-position: top left;
 }
 .bg-dark {
-    background-color: var(--rich-black-fogra-29-1);
+    
     color: var(--silver-metallic);
 }
 
@@ -181,8 +180,9 @@ a {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--sonic-silver);
+  background-image: url(../images/classes-bg.png);
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--silver-metallic);
   font-size: 1.6rem;
   line-height: 1.6;
   text-align: -webkit-center;
