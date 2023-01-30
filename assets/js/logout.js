@@ -34,6 +34,6 @@ function logout() {
             }
         })
         .then((data) => {
-            location.href = "https://goldnboy26.github.io/EMFITNESS/login.html"
+            location.href = "https://goldnboy26.github.io/EMFITNESS/htmlfolder/login.html"
         })
     }
