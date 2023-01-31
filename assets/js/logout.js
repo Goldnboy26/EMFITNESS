@@ -8,7 +8,7 @@
  if (Object.keys(params).length > 0) {
      localStorage.setItem('authInfo', JSON.stringify(params));
  }
- window.history.pushState({}, document.title, "/" + "https://goldnboy26.github.io/EMFITNESS/gallery.html");
+ window.history.pushState({}, document.title, "/" + "gallery.html");
  let info = JSON.parse(localStorage.getItem('authInfo'))
  console.log(info['access_token'])
  console.log(info['expires_in'])
@@ -21,7 +21,7 @@
      .then(data => data.json())
      .then((info) => {
          console.log(info)
-         document.getElementById('video').innerHTML += info.video-player
+         document.getElementById('title').innerHTML += info.title
          document.getElementById('heading').setAttribute('src',info.name)
      })
 
