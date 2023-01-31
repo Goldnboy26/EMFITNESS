@@ -21,8 +21,8 @@
      .then(data => data.json())
      .then((info) => {
          console.log(info)
-         document.getElementById('small-img-row').innerHTML += info.small-img-row
-         document.getElementById('small-img').setAttribute('src',info.small-img)
+         document.getElementById('row').innerHTML += info.row
+         document.getElementById('col').setAttribute('src',info.col)
      })
 
 function logout() {
