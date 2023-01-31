@@ -1,4 +1,3 @@
-
 var videoPlayer = document.getElementById("videoPlayer")
 var myVideo = document.getElementById("myVideo")
 
