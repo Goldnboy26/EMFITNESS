@@ -8,7 +8,7 @@
  if (Object.keys(params).length > 0) {
      localStorage.setItem('authInfo', JSON.stringify(params));
  }
- window.history.pushState({}, document.title, "/" + "https://goldnboy26.github.io/EMFITNESS/gallery.html");
+ window.history.pushState({}, document.title, "/" + "EMFITNESS/gallery.html");
  let info = JSON.parse(localStorage.getItem('authInfo'))
  console.log(info['access_token'])
  console.log(info['expires_in'])

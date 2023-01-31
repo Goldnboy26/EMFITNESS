@@ -10,7 +10,7 @@ function signIn(){
  
   // Parameters to pass to OAuth 2.0 endpoint.
   var params = {'client_id': '462548233409-s24ombaeh8i1kbqtl8rrak4lr2umehii.apps.googleusercontent.com',
-                'redirect_uri': 'https://goldnboy26.github.io/EMFITNESS/gallery.html',
+                'redirect_uri': 'EMFITNESS/gallery.html',
                 'response_type': 'token',
                 'scope':'https://www.googleapis.com/auth/userinfo.profile',
                 'include_granted_scopes': 'true',
