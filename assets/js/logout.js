@@ -21,7 +21,7 @@
      .then(data => data.json())
      .then((info) => {
          console.log(info)
-         document.getElementById('name').innerHTML += info.name
+         document.getElementById('video-player').innerHTML += info.video-player
          document.getElementById('image').setAttribute('src',info.picture)
      })
 
