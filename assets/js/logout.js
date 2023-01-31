@@ -21,7 +21,6 @@
      .then(data => data.json())
      .then((info) => {
          console.log(info)
-         document.getElementById('title').innerHTML += info.title
          document.getElementById('heading').setAttribute('src',info.name)
      })
 
