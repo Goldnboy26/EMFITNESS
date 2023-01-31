@@ -21,8 +21,8 @@
      .then(data => data.json())
      .then((info) => {
          console.log(info)
-         document.getElementById('videoPlayer').innerHTML += info.videoPlayer
-         document.getElementById('myVideo').setAttribute('src',info.myVideo)
+         document.getElementById('small-img-row').innerHTML += info.small-img-row
+         document.getElementById('small-img').setAttribute('src',info.small-img)
      })
 
 function logout() {
