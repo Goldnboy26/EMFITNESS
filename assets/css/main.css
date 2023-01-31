@@ -7,6 +7,19 @@
   padding: 0%;
 }
 
+.logout{
+  background-color: #3ea3c2;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 body{
   background-color: var(--rich-black-fogra-29-1);
   color: var(--silver-metallic);
@@ -280,6 +293,19 @@ html {
   background-color: var(--rich-black-fogra-29-1);
   color: var(--silver-metallic);
   background-image: url(../images/classes-bg.png);
+}
+
+.logout{
+  background-color: #3ea3c2;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .small-img-row{
