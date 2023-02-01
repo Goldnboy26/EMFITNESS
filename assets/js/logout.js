@@ -21,7 +21,7 @@
      .then(data => data.json())
      .then((info) => {
          console.log(info)
-         document.getElementById('heading').setAttribute('src',info.name)
+         document.getElementById('title').setAttribute('src',info.name)
      })
 
 function logout() {
