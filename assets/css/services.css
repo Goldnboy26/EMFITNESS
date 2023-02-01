@@ -151,6 +151,8 @@ img {
     font-size: var(--fs-6);
     margin-block: 16px 12px;
     text-align: -webkit-left;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .scrollbar-item {
@@ -269,5 +271,15 @@ element.style {
 .class-card .card-content {
     padding: 15px;
     width: 80%;
+}
+
+
+.class-card .card-text {
+    color: var(--sonic-silver);
+    font-size: var(--fs-6);
+    margin-block: 16px 12px;
+    text-align: -webkit-left;
+    font-size: 11px;
+    font-weight: bold;
 }
 }
